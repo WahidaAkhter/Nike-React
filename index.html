@@ -14,26 +14,30 @@
 <body>
     <header class="container bg-warning bg-gradient bg-opacity-10">
         <!-- navbar  -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-gradient bg-opacity-10 ">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="icons/Logo.png" alt="" width="
-                    291px" height="39.27px">
+                    <img width="291px" height="39px" src="icons/Logo.png" alt="">
                 </a>
-                <div class="collapse navbar-collapse" id="navbar-nav">
-                    <ul class="navbar-nav ms-auto mb-lg-0">
-                        <li class="nav-item ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Product</a>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About us</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item pe-5">
                             <a class="nav-link active" aria-current="page" href="#">Contact us</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -42,9 +46,9 @@
         <section class="container ">
             <div class="row ">
                 <div class="col-lg-6 mb-5">
-                    <img src="images/Group 33092.png" Width="407px" Height="407px">
+                    <img class="img-fluid w-75" src="images/Group 33092.png">
                 </div>
-                <div class="col-lg-6 mt-5 col-sm-6">
+                <div class="col-lg-6 mt-5">
                     <h1> <span class="text-warning">NIKE REACT </span><br>
                         INFINITY RUN 2</h1>
                     <p>hello there this is store to find about your choice</p>
@@ -64,48 +68,194 @@
         <!-- casual shoes  -->
         <section class="container my-5">
             <h2 class="my-2">CASUAL SHOES</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-2 g-4 row-cols-lg-3">
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                    <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
+                        <img src="images/image 5.png" class="card-img-top shadow-none bg-light rounded-3" alt="...">
+                        <div class="card-body pb-0">
+                            <h5 class="card-title">Nike Shoe</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
+                            <p><strong>$234</strong></p>
+                            <button class="btn btn-primary active ps-3 pe-3 pb-2" aria-current="page">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                buy now
+                            </button>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                    <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
+                        <img src="images/Daco_1703273 1.png" class="card-img-top shadow-none bg-light rounded-3"
+                            alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Sneakers Skate Shoe </h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
+                                additional content. This content is a little bit longer.</p>
+                            <p><strong>$234</strong></p>
+                            <button class="btn btn-primary active ps-3 pe-3 pb-2" aria-current="page">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                buy now
+                            </button>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
+                        <img src="images/pngegg 1.png" class="card-img-top shadow-none bg-light rounded-3" alt="...">
+                        <div class="card-body pb-0">
+                            <h5 class="card-title">Sneakers Basketball shoe </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p><strong>$234</strong></p>
+                            <button class="btn btn-primary active ps-3 pe-3 pb-2" aria-current="page">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                buy now
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="container my-5">
+            <h2 class="my-2">FORMAL SHOES</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4 row-cols-lg-3">
+                <div class="col">
+                    <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
+                        <img src="images/Mask Group.png" class="card-img-top shadow-none bg-light rounded-3" alt="...">
+                        <div class="card-body pb-0">
+                            <h5 class="card-title">Nike Shoe</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p><strong>$234</strong></p>
+                            <button class="btn btn-primary active ps-3 pe-3 pb-2" aria-current="page">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                buy now
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
+                        <img src="images/Rectangle 38.png" class="card-img-top shadow-none bg-light rounded-3"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sneakers Skate Shoe </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p><strong>$234</strong></p>
+                            <button class="btn btn-primary active ps-3 pe-3 pb-2" aria-current="page">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                buy now
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
+                        <img src="images/Rectangle 39.png" class="card-img-top shadow-none bg-light rounded-3"
+                            alt="...">
+                        <div class="card-body pb-0">
+                            <h5 class="card-title">Sneakers Basketball shoe </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p><strong>$234</strong></p>
+                            <button class="btn btn-primary active ps-3 pe-3 pb-2" aria-current="page">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                buy now
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- extra section  -->
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-3" style="max-width: 489px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="icons/image 12.png" class="img-fluid rounded-start" width="78px" height="82px"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Find the Perfect Fit</h5>
+                                    <p class="card-text">Everybody is different, which is why we
+                                        offer styles for every body.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="card mb-3" style="max-width: 489px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="icons/image 13.png" class="img-fluid rounded" width="78px" height="82px"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Free Exchanges</h5>
+                                    <p class="card-text">One of the many reasons you can shop
+                                        with peace of mind.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 489px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="icons/image 14.png" class="img-fluid rounded-start" width="78px" height="82px"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Contact Our Seller</h5>
+                                    <p class="card-text">They are here to help you. That's quite
+                                        literally what we pay them for.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="icons/XMLID 1.png" width="599px" height="354px" alt="">
                 </div>
             </div>
+
         </section>
     </main>
     <footer>
