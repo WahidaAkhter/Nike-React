@@ -204,11 +204,50 @@ body {
     align-items: center;
     gap: 25px;
     padding: 30px;
-    border-radius: 20px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-    transition: 0.3s;
-    border: 1px solid #f9f9f9;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f0f0f0;
+    margin-bottom: 25px;
+}
+
+.service-card:hover {
+    transform: translateX(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border-color: var(--nike-orange);
+}
+
+.service-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.service-card h5 {
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.about-graphic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .service-card:hover {
+        transform: translateY(-8px);
+    }
 }
 
 /* Responsiveness */
