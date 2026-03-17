@@ -26,6 +26,7 @@ body {
 .navbar-custom {
     position: sticky;
     top: 0;
+    margin-top: 0 !important;
     z-index: 1000;
     background-color: rgba(255, 249, 229, 0.8) !important;
     backdrop-filter: blur(15px);
