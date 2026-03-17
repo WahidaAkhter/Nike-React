@@ -222,20 +222,20 @@ body {
 .footer-main {
     background-color: #0b0d17; /* Richer, deeper dark navy */
     color: white;
-    padding: 30px 0 20px; /* Reduced from 50/30 */
-    margin-top: 25px; /* Reduced from 40 */
+    padding: 20px 0 15px; /* Minimal padding */
+    margin-top: 15px; /* Minimal top margin */
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px; /* Reduced from 40 */
+    gap: 20px; /* Further reduced */
 }
 
 .footer-col h4 {
-    font-size: 1.0rem; /* Slightly smaller title */
+    font-size: 0.95rem; /* Slightly smaller */
     font-weight: 700;
-    margin-bottom: 15px; /* Reduced from 25 */
+    margin-bottom: 10px; /* Minimal margin */
     color: #ffffff;
 }
 
@@ -246,7 +246,7 @@ body {
 }
 
 .footer-col ul li {
-    margin-bottom: 12px;
+    margin-bottom: 6px; /* Tighter list */
 }
 
 .footer-col ul li a {
@@ -322,10 +322,10 @@ body {
 
 .footer-btm {
     text-align: center;
-    margin-top: 25px; /* Reduced from 40 */
-    padding-top: 15px; /* Reduced from 20 */
+    margin-top: 15px; /* Minimal margin */
+    padding-top: 10px; /* Minimal padding */
     border-top: 1px solid #1a1f3d;
-    font-size: 0.8rem; /* Smaller text */
+    font-size: 0.75rem; /* Minimal text */
     color: #5b617c;
 }
 
