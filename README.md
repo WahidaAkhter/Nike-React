@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTFmYjc0NDQ1Y2VkMTUxNTFmYjc0NDQ1Y2VkMTUxNTFmYjc0NDQ1Y2VkJmN0PWc/3o7TKVUn7iM8FMEU24/giphy.gif" width="300" />
+  
   <h1>👟 Nike React: Infinity Fun Edition</h1>
   <h3>[🚀 Explore the Live Demo](https://nike-react-infinity-fun.netlify.app/)</h3>
 </div>

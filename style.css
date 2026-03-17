@@ -6,7 +6,7 @@
     --nike-blue: #2D3990;
     --text-dark: #363958;
     --text-light: #3E3E3E;
-    --section-padding: 80px;
+    --section-padding: 40px;
 }
 
 html {
@@ -112,7 +112,7 @@ body {
 /* --- Professional Product Cards --- */
 .section-title {
     font-weight: 800;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     letter-spacing: -1px;
     position: relative;
     display: inline-block;
