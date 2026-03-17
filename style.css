@@ -2,9 +2,15 @@
 
 :root {
     --nike-yellow: #FFF9E5;
+    --nike-orange: #FA804C;
     --nike-blue: #2D3990;
     --text-dark: #363958;
     --text-light: #3E3E3E;
+    --section-padding: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,156 +19,201 @@ body {
     color: var(--text-dark);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-/* Animations */
+/* --- Sticky Navbar with Blur --- */
+.navbar-custom {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 249, 229, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+/* --- Improved Spacing & Layout --- */
+.section-spacer {
+    padding: var(--section-padding) 0;
+}
+
+.hero-wrapper {
+    background-color: var(--nike-yellow);
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 60px;
+}
+
+/* --- Animations --- */
 @keyframes floatShoe {
     0% { transform: translateY(0px) rotate(-15deg); }
-    50% { transform: translateY(-20px) rotate(-10deg); }
+    50% { transform: translateY(-25px) rotate(-10deg); }
     100% { transform: translateY(0px) rotate(-15deg); }
 }
 
 .animate-left-shoe {
-    animation: floatShoe 5s ease-in-out infinite;
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));
+    animation: floatShoe 6s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
 }
 
-/* Original Navbar Recreation */
-.custom-nav {
-    background-color: var(--nike-yellow) !important;
-}
-
-/* Hero Section Recreation */
-.custom-hero {
-    background-color: var(--nike-yellow);
-    border-radius: 0 0 50px 50px;
-    padding: 50px 0;
-}
-
-.hero-title {
-    font-weight: 800;
-    color: var(--text-dark);
-}
-
-.hero-title span {
-    color: #FA804C;
-}
-
-/* Product Section (The Professional Redesign Part) */
-.product-section {
-    padding: 80px 0;
-}
-
+/* --- Professional Product Cards --- */
 .section-title {
     font-weight: 800;
-    margin-bottom: 50px;
-    color: var(--text-dark);
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--nike-orange);
+    border-radius: 2px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
 }
 
 .pro-card {
     background: #FFFFFF;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f5f5f5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .pro-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-    border-color: #FA804C;
+    transform: translateY(-12px);
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.08);
+    border-color: var(--nike-orange);
 }
 
 .pro-img-container {
-    background-color: #F1F1F1;
-    border-radius: 15px;
-    height: 250px;
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     overflow: hidden;
+    position: relative;
 }
 
 .pro-img-container img {
-    max-width: 80%;
-    transition: transform 0.3s ease;
+    max-width: 85%;
+    transition: transform 0.4s ease;
 }
 
 .pro-card:hover .pro-img-container img {
-    transform: scale(1.1) rotate(-5deg);
+    transform: scale(1.15) rotate(-8deg);
 }
 
 .pro-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .pro-info p {
     color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .pro-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
 }
 
 .pro-price {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    color: #FA804C;
+    color: var(--nike-orange);
 }
 
 .buy-now-btn {
-    background: linear-gradient(180deg, #FFB084 0%, #FA804C 100%);
+    background: linear-gradient(135deg, #FFB084 0%, #FA804C 100%);
     color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     transition: 0.3s;
+    border: none;
 }
 
 .buy-now-btn:hover {
-    box-shadow: 0 5px 15px rgba(250, 128, 76, 0.4);
+    box-shadow: 0 8px 20px rgba(250, 128, 76, 0.3);
     transform: scale(1.05);
+    color: white;
 }
 
-/* Services */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
+/* --- Services Grid --- */
 .service-card {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    gap: 25px;
+    padding: 30px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: 0.3s;
+    border: 1px solid #f9f9f9;
+    height: 100%;
+}
+
+.service-card:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    border-color: var(--nike-yellow);
 }
 
 .service-card img {
-    width: 60px;
+    width: 70px;
+    height: auto;
+}
+
+/* --- Responsiveness & Polishing --- */
+@media (max-width: 1200px) {
+    :root { --section-padding: 60px; }
 }
 
 @media (max-width: 991px) {
-    .services-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 3rem !important; }
+    .hero-wrapper { border-radius: 0 0 40px 40px; }
+    .service-card { padding: 20px; }
+}
+
+@media (max-width: 768px) {
+    .section-spacer { padding: 40px 0; }
+    .hero-title { font-size: 2.5rem !important; text-align: center; }
+    .hero-text { text-align: center; }
+    .hero-btn-container { text-align: center; }
+    .animate-left-shoe { max-width: 80%; margin: 0 auto; display: block; }
+    .product-grid { grid-template-columns: 1fr; gap: 25px; }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand img { width: 180px; }
+    .hero-title { font-size: 2rem !important; }
+    .pro-img-container { height: 220px; }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike React - Professional Redesign</title>
+    <title>Nike React - Professional Portfolio</title>
     <!-- bootstrap stylesheet  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,53 +14,55 @@
 </head>
 
 <body>
-    <!-- Navbar Restored -->
-    <header class="bg-warning bg-gradient bg-opacity-10">
-        <nav class="navbar navbar-expand-lg navbar-light container ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" width="250px" src="icons/Logo.png" alt="Nike Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto font-weight-bold">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#products">Product</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#about">About us</a></li>
-                        <li class="nav-item pe-5"><a class="nav-link active" href="#contact">Contact us</a></li>
-                    </ul>
-                </div>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" width="220px" src="icons/Logo.png" alt="Nike Logo">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold">
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#products">Product</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#about">About us</a></li>
+                    <li class="nav-item px-lg-3"><a class="nav-link" href="#contact">Contact us</a></li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Hero Section Restored (But with professional image and animation) -->
-        <section class="container py-5">
+    <!-- Hero Section -->
+    <header class="hero-wrapper">
+        <div class="container section-spacer">
             <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-1 order-2 mt-4 mt-lg-0">
-                    <div class="hero-image-container">
-                        <img class="img-fluid w-100 animate-left-shoe" src="images/hero_shoe.png" alt="Main Product">
+                <div class="col-lg-6 order-lg-1 order-2 mt-5 mt-lg-0 text-center">
+                    <div class="hero-image-outer">
+                        <img class="img-fluid animate-left-shoe" src="images/hero_shoe.png" alt="Main Nike Shoe">
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-2 order-1">
-                    <h1 class="hero-title display-3 fw-bold"> <span class="text-warning">NIKE REACT </span><br>
+                <div class="col-lg-6 order-lg-2 order-1 hero-text">
+                    <h1 class="hero-title display-3 fw-bold mb-4"> <span class="text-warning">NIKE REACT </span><br>
                         INFINITY RUN 2</h1>
-                    <p class="lead text-muted">Experience the pinnacle of comfort and performance. Designed to keep you running longer and safer.</p>
-                    <button class="btn btn-warning btn-lg px-4 py-2 text-white fw-bold shadow-sm" style="background-color: #FA804C; border: none;">
-                        <i class="fas fa-shopping-cart me-2"></i> BUY NOW
-                    </button>
+                    <p class="lead text-muted mb-5">Built for the bold. Experience revolutionary cushioning and energy return that keeps you running longer and stronger.</p>
+                    <div class="hero-btn-container">
+                        <button class="btn btn-warning btn-lg px-5 py-3 text-white fw-bold shadow-sm" style="background-color: #FA804C; border: none; border-radius: 12px;">
+                            <i class="fas fa-shopping-cart me-2"></i> BUY NOW
+                        </button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </header>
 
     <main>
-        <!-- Professional Products Section (Redesigned) -->
-        <section class="container product-section" id="products">
-            <h2 class="section-title">CASUAL SHOES</h2>
-            <div class="product-grid">
+        <!-- Polished Product Section -->
+        <section class="container section-spacer" id="products">
+            <h2 class="section-title text-uppercase">Casual Collection</h2>
+            <div class="product-grid mt-4">
                 <!-- Shoe 1 -->
                 <div class="pro-card">
                     <div class="pro-img-container">
@@ -68,11 +70,11 @@
                     </div>
                     <div class="pro-info">
                         <h3>Nike Air Max 270</h3>
-                        <p>Plush cushioning meets bold style for everyday comfort.</p>
+                        <p>Modern engineering meets heritage style. Perfect for daily wear with unrivaled air cushioning.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$234</span>
                             <a href="#" class="buy-now-btn">
-                                <i class="fas fa-shopping-cart"></i> Buy Now
+                                <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
                     </div>
@@ -84,11 +86,11 @@
                     </div>
                     <div class="pro-info">
                         <h3>Air Pegasus Blue</h3>
-                        <p>Engineered for speed, built for the long haul.</p>
+                        <p>A reactive ride for every mile. Built with breathable mesh and responsive foam technology.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$210</span>
                             <a href="#" class="buy-now-btn">
-                                <i class="fas fa-shopping-cart"></i> Buy Now
+                                <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
                     </div>
@@ -100,30 +102,30 @@
                     </div>
                     <div class="pro-info">
                         <h3>Suede Lifestyle</h3>
-                        <p>Classic aesthetics meet modern performance technology.</p>
+                        <p>Where premium materials meet street performance. A versatile look for the modern athlete.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$190</span>
                             <a href="#" class="buy-now-btn">
-                                <i class="fas fa-shopping-cart"></i> Buy Now
+                                <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h2 class="section-title mt-5">FORMAL & TRAINING</h2>
-            <div class="product-grid">
+            <h2 class="section-title text-uppercase mt-5 pt-4">Elite Training</h2>
+            <div class="product-grid mt-4">
                 <div class="pro-card">
                     <div class="pro-img-container">
                         <img src="images/shoe_4.png" alt="Nike Elite">
                     </div>
                     <div class="pro-info">
                         <h3>Elite Gold Training</h3>
-                        <p>Maximum stability for your most intense gym sessions.</p>
+                        <p>Engineered for stability. The ultimate choice for high-intensity interval training.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$180</span>
                             <a href="#" class="buy-now-btn">
-                                <i class="fas fa-shopping-cart"></i> Buy Now
+                                <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
                     </div>
@@ -134,11 +136,11 @@
                     </div>
                     <div class="pro-info">
                         <h3>Training Core Red</h3>
-                        <p>Reliable traction and support for versatile workouts.</p>
+                        <p>Lightweight, flexible, and ready for everything. Your new go-to for the gym.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$160</span>
                             <a href="#" class="buy-now-btn">
-                                <i class="fas fa-shopping-cart"></i> Buy Now
+                                <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
                     </div>
@@ -149,11 +151,11 @@
                     </div>
                     <div class="pro-info">
                         <h3>Classic React Series</h3>
-                        <p>The iconic performance shoe that redefined running.</p>
+                        <p>The original performance runner. Timeless design combined with modern React technology.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$130</span>
                             <a href="#" class="buy-now-btn">
-                                <i class="fas fa-shopping-cart"></i> Buy Now
+                                <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
                     </div>
@@ -161,41 +163,56 @@
             </div>
         </section>
 
-        <!-- Extra Section Restored -->
-        <section class="container py-5" id="about">
-            <div class="row align-items-center">
+        <!-- Responsive Service Section -->
+        <section class="container section-spacer" id="about">
+            <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
-                    <div class="service-card mb-4 bg-white">
-                        <img src="icons/image 12.png" alt="Fit">
-                        <div>
-                            <h5 class="fw-bold mb-1">Find the Perfect Fit</h5>
-                            <p class="text-muted mb-0">Styles for every body and every level.</p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="service-card">
+                                <img src="icons/image 12.png" alt="Fit">
+                                <div>
+                                    <h5 class="fw-bold mb-2">Find the Perfect Fit</h5>
+                                    <p class="text-muted mb-0">Professional fittings for every athlete, every goal, and every level.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card mb-4 bg-white">
-                        <img src="icons/image 13.png" alt="Exchange">
-                        <div>
-                            <h5 class="fw-bold mb-1">Free Exchanges</h5>
-                            <p class="text-muted mb-0">Shop with absolute peace of mind.</p>
+                        <div class="col-12">
+                            <div class="service-card">
+                                <img src="icons/image 13.png" alt="Exchange">
+                                <div>
+                                    <h5 class="fw-bold mb-2">Free Exchanges</h5>
+                                    <p class="text-muted mb-0">Easy 30-day returns. We want you to love your gear as much as we do.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card mb-4 bg-white">
-                        <img src="icons/image 14.png" alt="Support">
-                        <div>
-                            <h5 class="fw-bold mb-1">Expert Support</h5>
-                            <p class="text-muted mb-0">Our team is here to help you 24/7.</p>
+                        <div class="col-12">
+                            <div class="service-card">
+                                <img src="icons/image 14.png" alt="Support">
+                                <div>
+                                    <h5 class="fw-bold mb-2">24/7 Expert Support</h5>
+                                    <p class="text-muted mb-0">Dedicated support team available around the clock to assist you.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img class="img-fluid w-75" src="icons/XMLID 1.png" alt="Banner">
+                <div class="col-lg-6 d-none d-lg-block text-center">
+                    <img class="img-fluid w-75 h-auto" src="icons/XMLID 1.png" alt="Service Graphic">
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-5 border-top">
-        <p class="text-muted">&copy; 2026 NIKE | RE-IMAGINED & PROFESSIONAL</p>
+    <footer class="text-center section-spacer border-top mt-5">
+        <div class="container">
+            <p class="text-muted fw-light">&copy; 2026 NIKE | ENGINEERED FOR CHAMPIONS</p>
+            <div class="mt-3">
+                <a href="#" class="text-muted mx-2 fs-5"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-muted mx-2 fs-5"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-muted mx-2 fs-5"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
 
     <!-- bootstrap script  -->
