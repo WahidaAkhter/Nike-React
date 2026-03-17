@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@700;800;900&family=Bungee&display=swap');
 
 :root {
     --nike-yellow: #FFF9E5;
@@ -41,6 +41,14 @@ body {
 }
 
 /* --- Animations --- */
+.hero-title {
+    font-family: 'Bungee', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
 @keyframes floatShoe {
     0% { transform: translateY(0px) rotate(-15deg); }
     50% { transform: translateY(-15px) rotate(-10deg); } /* Reduced float movement */
