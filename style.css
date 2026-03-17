@@ -217,3 +217,123 @@ body {
     .product-grid { grid-template-columns: 1fr; }
     .image-swap-container img { width: 80%; }
 }
+
+/* --- Premium Footer Design --- */
+.footer-main {
+    background-color: #080a1a; /* Very dark navy */
+    color: white;
+    padding: 80px 0 40px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #aeb2c1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--nike-orange);
+    padding-left: 5px;
+}
+
+.newsletter-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #aeb2c1;
+    margin-bottom: 20px;
+}
+
+.subscribe-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.subscribe-box input {
+    flex-grow: 1;
+    background: #11152c;
+    border: 1px solid #232a50;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.subscribe-box button {
+    background: white;
+    color: #080a1a;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.subscribe-box button:hover {
+    background: var(--nike-orange);
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #aeb2c1;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-btm {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #1a1f3d;
+    font-size: 0.85rem;
+    color: #5b617c;
+}
+
+@media (max-width: 991px) {
+    .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+}
+
+@media (max-width: 576px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .subscribe-box { flex-direction: column; }
+}
