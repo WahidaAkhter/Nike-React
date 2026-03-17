@@ -39,12 +39,6 @@ body {
     padding: var(--section-padding) 0;
 }
 
-.hero-wrapper {
-    background-color: var(--nike-yellow);
-    border-radius: 0 0 60px 60px;
-    padding-bottom: 60px;
-}
-
 /* --- Animations --- */
 @keyframes floatShoe {
     0% { transform: translateY(0px) rotate(-15deg); }
@@ -55,6 +49,52 @@ body {
 .animate-left-shoe {
     animation: floatShoe 6s ease-in-out infinite;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
+    transition: all 0.5s ease;
+}
+
+/* --- Multi-Angle Hover Effect --- */
+.image-swap-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-swap-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 90%;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.image-swap-container img.main-view {
+    opacity: 1;
+    position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* Hero Special Animation */
+.hero-image-swap img.main-view {
+    opacity: 1;
+    transform: rotate(-15deg);
+    animation: floatShoe 6s ease-in-out infinite;
+}
+
+.image-swap-container:hover img.main-view {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-20deg);
+}
+
+.image-swap-container:hover img.alt-view {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(5deg);
 }
 
 /* --- Professional Product Cards --- */
@@ -88,7 +128,7 @@ body {
     border-radius: 24px;
     padding: 24px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.04);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s ease;
     border: 1px solid #f5f5f5;
     height: 100%;
     display: flex;
@@ -96,7 +136,7 @@ body {
 }
 
 .pro-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.08);
     border-color: var(--nike-orange);
 }
@@ -110,16 +150,6 @@ body {
     justify-content: center;
     margin-bottom: 24px;
     overflow: hidden;
-    position: relative;
-}
-
-.pro-img-container img {
-    max-width: 85%;
-    transition: transform 0.4s ease;
-}
-
-.pro-card:hover .pro-img-container img {
-    transform: scale(1.15) rotate(-8deg);
 }
 
 .pro-info h3 {
@@ -168,7 +198,7 @@ body {
     color: white;
 }
 
-/* --- Services Grid --- */
+/* Service Grid Polishing */
 .service-card {
     display: flex;
     align-items: center;
@@ -179,41 +209,11 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     transition: 0.3s;
     border: 1px solid #f9f9f9;
-    height: 100%;
 }
 
-.service-card:hover {
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    border-color: var(--nike-yellow);
-}
-
-.service-card img {
-    width: 70px;
-    height: auto;
-}
-
-/* --- Responsiveness & Polishing --- */
-@media (max-width: 1200px) {
-    :root { --section-padding: 60px; }
-}
-
-@media (max-width: 991px) {
-    .hero-title { font-size: 3rem !important; }
-    .hero-wrapper { border-radius: 0 0 40px 40px; }
-    .service-card { padding: 20px; }
-}
-
+/* Responsiveness */
 @media (max-width: 768px) {
     .section-spacer { padding: 40px 0; }
-    .hero-title { font-size: 2.5rem !important; text-align: center; }
-    .hero-text { text-align: center; }
-    .hero-btn-container { text-align: center; }
-    .animate-left-shoe { max-width: 80%; margin: 0 auto; display: block; }
-    .product-grid { grid-template-columns: 1fr; gap: 25px; }
-}
-
-@media (max-width: 480px) {
-    .navbar-brand img { width: 180px; }
-    .hero-title { font-size: 2rem !important; }
-    .pro-img-container { height: 220px; }
+    .product-grid { grid-template-columns: 1fr; }
+    .image-swap-container img { width: 80%; }
 }
