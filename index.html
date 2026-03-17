@@ -30,6 +30,11 @@
                     <li class="nav-item"><a class="nav-link px-lg-3" href="#products">Product</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3" href="#about">About us</a></li>
                     <li class="nav-item px-lg-3"><a class="nav-link" href="login.html">Sign in</a></li>
+                    <li class="nav-item ps-lg-3">
+                        <button class="nav-link btn btn-link text-decoration-none fw-bold cart-btn" id="cartOpenBtn">
+                            <i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -75,7 +80,7 @@
                         <p>Modern engineering meets heritage style. Perfect for daily wear with unrivaled air cushioning.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$234</span>
-                            <a href="#" class="buy-now-btn">
+                            <a href="javascript:void(0)" class="buy-now-btn add-to-cart" data-name="Nike Air Max 270" data-price="234" data-image="images/shoe_1.png">
                                 <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
@@ -94,7 +99,7 @@
                         <p>A reactive ride for every mile. Built with breathable mesh and responsive foam technology.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$210</span>
-                            <a href="#" class="buy-now-btn">
+                            <a href="javascript:void(0)" class="buy-now-btn add-to-cart" data-name="Air Pegasus Blue" data-price="210" data-image="images/shoe_2.png">
                                 <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
@@ -113,7 +118,7 @@
                         <p>Where premium materials meet street performance. A versatile look for the modern athlete.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$190</span>
-                            <a href="#" class="buy-now-btn">
+                            <a href="javascript:void(0)" class="buy-now-btn add-to-cart" data-name="Suede Lifestyle" data-price="190" data-image="images/shoe_3.png">
                                 <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
@@ -135,7 +140,7 @@
                         <p>Engineered for stability. The ultimate choice for high-intensity interval training.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$180</span>
-                            <a href="#" class="buy-now-btn">
+                            <a href="javascript:void(0)" class="buy-now-btn add-to-cart" data-name="Elite Gold Training" data-price="180" data-image="images/shoe_4.png">
                                 <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
@@ -153,7 +158,7 @@
                         <p>Lightweight, flexible, and ready for everything. Your new go-to for the gym.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$160</span>
-                            <a href="#" class="buy-now-btn">
+                            <a href="javascript:void(0)" class="buy-now-btn add-to-cart" data-name="Training Core Red" data-price="160" data-image="images/shoe_5.png">
                                 <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
@@ -172,7 +177,7 @@
                         <p>The premium performance runner. Timeless design combined with modern React technology.</p>
                         <div class="pro-footer">
                             <span class="pro-price">$130</span>
-                            <a href="#" class="buy-now-btn">
+                            <a href="javascript:void(0)" class="buy-now-btn add-to-cart" data-name="React Infinity Elite" data-price="130" data-image="images/hero_shoe.png">
                                 <i class="fas fa-cart-plus"></i> Buy Now
                             </a>
                         </div>
@@ -282,6 +287,122 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- Sidebar Cart -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="cartCloseBtn" class="cart-close">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <!-- Items injected by JS -->
+            <p class="text-center text-muted mt-5 empty-msg">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalAmt">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = [];
+            const overlay = document.getElementById('cartOverlay');
+            const sidebar = document.getElementById('cartSidebar');
+            const cartItemsContainer = document.getElementById('cartItems');
+            const cartTotalAmt = document.getElementById('cartTotalAmt');
+            const cartCount = document.getElementById('cartCount');
+            const openBtn = document.getElementById('cartOpenBtn');
+            const closeBtn = document.getElementById('cartCloseBtn');
+
+            // Toggle Sidebar
+            if (openBtn) {
+                openBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    overlay.classList.add('active');
+                    sidebar.classList.add('active');
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    overlay.classList.remove('active');
+                    sidebar.classList.remove('active');
+                });
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', () => {
+                    overlay.classList.remove('active');
+                    sidebar.classList.remove('active');
+                });
+            }
+
+            // Add to Cart
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const name = btn.getAttribute('data-name');
+                    const price = parseFloat(btn.getAttribute('data-price'));
+                    const img = btn.getAttribute('data-image');
+                    
+                    const existing = cart.find(item => item.name === name);
+                    if (existing) {
+                        existing.qty++;
+                    } else {
+                        cart.push({ name, price, img, qty: 1 });
+                    }
+                    updateCart();
+                    
+                    // Open sidebar automatically after adding
+                    overlay.classList.add('active');
+                    sidebar.classList.add('active');
+                });
+            });
+
+            function updateCart() {
+                cartItemsContainer.innerHTML = '';
+                let total = 0;
+                let count = 0;
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="text-center text-muted mt-5 empty-msg">Your cart is currently empty.</p>';
+                } else {
+                    cart.forEach((item, index) => {
+                        total += item.price * item.qty;
+                        count += item.qty;
+                        cartItemsContainer.innerHTML += `
+                            <div class="cart-item">
+                                <img src="${item.img}" alt="${item.name}">
+                                <div class="item-info">
+                                    <h5>${item.name}</h5>
+                                    <p>$${item.price} x ${item.qty}</p>
+                                </div>
+                                <button class="remove-item" data-index="${index}">&times;</button>
+                            </div>
+                        `;
+                    });
+
+                    // Add remove event listeners
+                    document.querySelectorAll('.remove-item').forEach(remBtn => {
+                        remBtn.addEventListener('click', (e) => {
+                            const idx = e.target.getAttribute('data-index');
+                            cart.splice(idx, 1);
+                            updateCart();
+                        });
+                    });
+                }
+
+                cartTotalAmt.innerText = '$' + total.toFixed(2);
+                cartCount.innerText = count;
+            }
+        });
+    </script>
 </body>
 
 </html>
