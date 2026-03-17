@@ -3,175 +3,205 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKE | LIMITLESS PERFORMANCE</title>
+    <title>Nike React - Professional Redesign</title>
+    <!-- bootstrap stylesheet  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a href="#" class="logo">NIKE<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navbar Restored -->
+    <header class="bg-warning bg-gradient bg-opacity-10">
+        <nav class="navbar navbar-expand-lg navbar-light container ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid" width="250px" src="icons/Logo.png" alt="Nike Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto font-weight-bold">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#products">Product</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#about">About us</a></li>
+                        <li class="nav-item pe-5"><a class="nav-link active" href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <header class="hero" id="home">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <h1>MOVE <span>WITHOUT</span> LIMITS.</h1>
-                <p>The new Nike React Infinity Run 2 is designed to keep you running longer, better, and with more energy than ever before.</p>
-                <a href="#products" class="btn-primary">Shop Now</a>
+        <!-- Hero Section Restored (But with professional image and animation) -->
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2 mt-4 mt-lg-0">
+                    <div class="hero-image-container">
+                        <img class="img-fluid w-100 animate-left-shoe" src="images/hero_shoe.png" alt="Main Product">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <h1 class="hero-title display-3 fw-bold"> <span class="text-warning">NIKE REACT </span><br>
+                        INFINITY RUN 2</h1>
+                    <p class="lead text-muted">Experience the pinnacle of comfort and performance. Designed to keep you running longer and safer.</p>
+                    <button class="btn btn-warning btn-lg px-4 py-2 text-white fw-bold shadow-sm" style="background-color: #FA804C; border: none;">
+                        <i class="fas fa-shopping-cart me-2"></i> BUY NOW
+                    </button>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero_shoe.png" alt="Nike React Infinity Run 2">
-            </div>
-        </div>
+        </section>
     </header>
 
     <main>
-        <section class="container" id="products">
-            <h2 class="section-title">FEATURED PRODUCTS</h2>
+        <!-- Professional Products Section (Redesigned) -->
+        <section class="container product-section" id="products">
+            <h2 class="section-title">CASUAL SHOES</h2>
             <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image">
+                <!-- Shoe 1 -->
+                <div class="pro-card">
+                    <div class="pro-img-container">
                         <img src="images/shoe_1.png" alt="Nike Air Max">
                     </div>
-                    <div class="product-info">
+                    <div class="pro-info">
                         <h3>Nike Air Max 270</h3>
-                        <p>Comfort and style combined in a minimalist design.</p>
-                        <div class="product-footer">
-                            <span class="price">$150</span>
-                            <div class="buy-btn"><i class="fas fa-plus"></i></div>
+                        <p>Plush cushioning meets bold style for everyday comfort.</p>
+                        <div class="pro-footer">
+                            <span class="pro-price">$234</span>
+                            <a href="#" class="buy-now-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image">
+                <!-- Shoe 2 -->
+                <div class="pro-card">
+                    <div class="pro-img-container">
                         <img src="images/shoe_2.png" alt="Nike Pegasus">
                     </div>
-                    <div class="product-info">
+                    <div class="pro-info">
                         <h3>Air Pegasus Blue</h3>
-                        <p>Built for speed and durability on any terrain.</p>
-                        <div class="product-footer">
-                            <span class="price">$120</span>
-                            <div class="buy-btn"><i class="fas fa-plus"></i></div>
+                        <p>Engineered for speed, built for the long haul.</p>
+                        <div class="pro-footer">
+                            <span class="pro-price">$210</span>
+                            <a href="#" class="buy-now-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/shoe_3.png" alt="Nike Forest Runner">
+                <!-- Shoe 3 -->
+                <div class="pro-card">
+                    <div class="pro-img-container">
+                        <img src="images/shoe_3.png" alt="Nike Suede">
                     </div>
-                    <div class="product-info">
-                        <h3>Forest Runner Suede</h3>
-                        <p>Earth-toned performance with a premium finish.</p>
-                        <div class="product-footer">
-                            <span class="price">$140</span>
-                            <div class="buy-btn"><i class="fas fa-plus"></i></div>
+                    <div class="pro-info">
+                        <h3>Suede Lifestyle</h3>
+                        <p>Classic aesthetics meet modern performance technology.</p>
+                        <div class="pro-footer">
+                            <span class="pro-price">$190</span>
+                            <a href="#" class="buy-now-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/shoe_4.png" alt="Nike Gold Elite">
+            </div>
+
+            <h2 class="section-title mt-5">FORMAL & TRAINING</h2>
+            <div class="product-grid">
+                <div class="pro-card">
+                    <div class="pro-img-container">
+                        <img src="images/shoe_4.png" alt="Nike Elite">
                     </div>
-                    <div class="product-info">
-                        <h3>Elite Gold Series</h3>
-                        <p>Maximum cushioning for long-distance training.</p>
-                        <div class="product-footer">
-                            <span class="price">$180</span>
-                            <div class="buy-btn"><i class="fas fa-plus"></i></div>
+                    <div class="pro-info">
+                        <h3>Elite Gold Training</h3>
+                        <p>Maximum stability for your most intense gym sessions.</p>
+                        <div class="pro-footer">
+                            <span class="pro-price">$180</span>
+                            <a href="#" class="buy-now-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/shoe_5.png" alt="Nike Red Training">
+                <div class="pro-card">
+                    <div class="pro-img-container">
+                        <img src="images/shoe_5.png" alt="Nike Red">
                     </div>
-                    <div class="product-info">
+                    <div class="pro-info">
                         <h3>Training Core Red</h3>
-                        <p>Stability and grip for your most intense workouts.</p>
-                        <div class="product-footer">
-                            <span class="price">$110</span>
-                            <div class="buy-btn"><i class="fas fa-plus"></i></div>
+                        <p>Reliable traction and support for versatile workouts.</p>
+                        <div class="pro-footer">
+                            <span class="pro-price">$160</span>
+                            <a href="#" class="buy-now-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Product 6 -->
-                <div class="product-card">
-                    <div class="product-image">
+                <div class="pro-card">
+                    <div class="pro-img-container">
                         <img src="images/Group 33092.png" alt="Nike Classic">
                     </div>
-                    <div class="product-info">
-                        <h3>Classic React</h3>
-                        <p>The original performance that started it all.</p>
-                        <div class="product-footer">
-                            <span class="price">$130</span>
-                            <div class="buy-btn"><i class="fas fa-plus"></i></div>
+                    <div class="pro-info">
+                        <h3>Classic React Series</h3>
+                        <p>The iconic performance shoe that redefined running.</p>
+                        <div class="pro-footer">
+                            <span class="pro-price">$130</span>
+                            <a href="#" class="buy-now-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="container" id="about">
-            <h2 class="section-title">WHY CHOOSE US</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-shipping-fast service-icon"></i>
-                    <h3>Free Delivery</h3>
-                    <p>On all orders over $100 across the globe.</p>
+        <!-- Extra Section Restored -->
+        <section class="container py-5" id="about">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="service-card mb-4 bg-white">
+                        <img src="icons/image 12.png" alt="Fit">
+                        <div>
+                            <h5 class="fw-bold mb-1">Find the Perfect Fit</h5>
+                            <p class="text-muted mb-0">Styles for every body and every level.</p>
+                        </div>
+                    </div>
+                    <div class="service-card mb-4 bg-white">
+                        <img src="icons/image 13.png" alt="Exchange">
+                        <div>
+                            <h5 class="fw-bold mb-1">Free Exchanges</h5>
+                            <p class="text-muted mb-0">Shop with absolute peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="service-card mb-4 bg-white">
+                        <img src="icons/image 14.png" alt="Support">
+                        <div>
+                            <h5 class="fw-bold mb-1">Expert Support</h5>
+                            <p class="text-muted mb-0">Our team is here to help you 24/7.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-item">
-                    <i class="fas fa-undo-alt service-icon"></i>
-                    <h3>Easy Returns</h3>
-                    <p>30 days return policy for a peace of mind shopping.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-headset service-icon"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Our experts are always here to help you out.</p>
+                <div class="col-lg-6 text-center">
+                    <img class="img-fluid w-75" src="icons/XMLID 1.png" alt="Banner">
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 NIKE RE-IMAGINED | DESIGNED FOR THE BOLD</p>
-        </div>
+    <footer class="text-center py-5 border-top">
+        <p class="text-muted">&copy; 2026 NIKE | RE-IMAGINED & PROFESSIONAL</p>
     </footer>
 
-    <script>
-        // Simple Intersection Observer for Fade-in effects
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    <!-- bootstrap script  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
